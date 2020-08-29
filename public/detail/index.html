@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../assets/webREM.js"></script>
+        <link rel="stylesheet" href="../assets/reset.css" />
+        <link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="iconfont.css" />
+        <title>详情页</title>
+        <script type="text/javascript">
+          window.PointerEvent = undefined;
+        </script>
+    </head>
+    <body>
+        <div class="detail">
+            <div class="header">
+                <a href="#" class='iconfont icon-back' onclick="history.back();"></a>
+                <div class="header-center">商品详情</div>
+                <span class="iconfont icon-Menu_Home"></span>
+            </div>
+            <div class="content">
+                <div class="banner-wrapper">
+                    <ul></ul>
+                    <span class="indicator"></span>
+                </div>
+                <h1 class="p-name"></h1>
+                <h2 class="p-brief"></h2>
+                <i>￥</i>
+                <em class="p-price"></em>
+
+            </div>
+            <div class="footer clearfix">
+               <div class="footer-l clearfix">
+                    <a href="">
+                        <span class="like "><i class="iconfont icon-xihuan02 "></i>收藏</span>
+                    </a>
+                    <a href='/cart/index.html'>
+                        <span class=" cart"><i class="iconfont icon-qicheqianlian-1-copy"></i><em>0</em>购物车</span>
+                    </a>
+               </div>
+                <div class="footer-r clearfix">
+                    <button class="buy-now" >立即购买</button>
+                    <button class="add-cart" onclick="$('.shopping-dialog-wrapper').css({'display': 'block'})">加入购物车</button>
+                    
+                </div>
+            </div>
+            <div class="shopping-dialog-wrapper">
+                <div class="shopping-dialog">
+                    <span class="iconfont icon-close" onclick="$('.shopping-dialog-wrapper').css({'display': 'none'})"></span>
+                    <div class="shopping-dialog-header">
+                        <img src='' class="avatar" />
+                        <em class="price"></em>
+                    </div>
+                    <div class="shopping-dialog-content">
+                        <span class="title">数量</span>
+                         <div class="count-wrapper">
+                            <span class="iconfont icon-decrease decrease disable"></span>
+                            <span class="count">1</span>
+                            <span class="iconfont icon-add add  "></span>
+                         </div>
+                    </div>
+                    <div class="shopping-dialog-footer">
+                        <button class="btn-add-cart">确定</button>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <script src="../assets/jquery-3.4.1.min.js"></script>
+        <script src="../assets/iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+        <script src='../assets/imagesloaded.js'></script>
+        <script src="../assets/http.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

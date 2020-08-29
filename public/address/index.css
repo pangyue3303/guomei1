@@ -1,0 +1,267 @@
+/* 
+* @Author: liwenqi
+* @Date:   2019-08-14 17:21:51
+* @Last Modified by:   liwenqi
+* @Last Modified time: 2019-08-17 15:35:51
+*/
+
+.address-dialog-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 102;
+    display: none;
+}
+.address-dialog-wrapper.active{
+    display: block;
+}
+.address-dialog {
+    position:absolute;
+    width: 100%;
+    height: 70%;
+    background-color: #fff;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 0.3rem;
+}
+.address-dialog>h3.title {
+    height: 0.9rem;
+    line-height: 1rem;
+    text-align: center; 
+    font-weight: normal; 
+    font-size: 0.36rem;
+    flex-shrink: 0;
+}
+.address-dialog>i.remove-wrapper {
+    position:absolute;
+    right: 0.5rem;
+    top: 0.4rem;
+    font-size: 0.26rem;
+    transform: rotateZ(-45deg);
+}
+.address-dialog>p {
+    height: 0.9rem;
+    line-height: 1rem;
+    font-size: 0.26rem;
+    flex-shrink: 0;
+}
+.address-dialog>ul {
+    border-top: 1px solid #ccc;
+    flex-grow: 1;
+    overflow: auto;
+}
+.address-dialog>ul>li {
+    padding:0.2rem 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.24rem;
+}
+/*header部分*/
+.address {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+.address>.header {
+   height: 1rem;
+   position:relative;
+   flex-shrink: 0;
+   border-bottom: 1px solid #ccc;
+
+}
+.address>.header>*{
+    height:0.9rem;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #404040;
+}
+.address>.header>a {
+   position:absolute;
+   top: 0;
+   left:0; 
+   width: 1rem;
+   font-size: 0.26rem;
+}
+.address>.header>a.exit-edit {display: none;}
+.address>.header>h3 {
+    text-align: center;
+    font-size: 0.4rem;
+    font-weight: normal;
+}
+.address>.header>h3.title:before{
+    content:'收货地址管理';
+}
+
+.address>.header>button.btn-add{
+    position:absolute;
+    top: 0;
+    right:0;
+    width: 1rem;
+    border:none;
+    outline: none;
+    background-color: #fff;
+    font-size: 0.5rem;
+}
+.address>.header>button.btn-delete {
+    position:absolute;
+    top: 0;
+    right:0;
+    width: 1rem;
+    border:none;
+    outline: none;
+    background-color: #fff;
+    font-size: 0.26rem;
+    display: none;
+}
+.address>.content {
+    flex-grow: 1;
+    overflow:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.address>.content.hide  {
+    display: none;
+}
+/*进入新增状态*/
+.header.edit>a.back {
+    display:none;
+}
+.header.edit>a.exit-edit {
+    display: block;
+}
+.header.edit>h3.title:before {
+    content: '添加新地址';
+}
+.header.edit>button.btn-add{
+    display: none;
+	
+}
+/*进入修改状态*/
+.header.edit.update>h3.title:before {
+    content: '编辑地址';
+}
+.header.edit.update>.btn-delete{
+    display: block;
+}
+/*表单样式*/
+
+.content-add {
+    background-color: #F2F2F2;
+}
+.content-add>form{
+   width: 100%;
+   background-color: #fff;
+}
+.content-add>form>ul {
+    padding: 0 0.3rem;
+}
+.content-add>form>ul >li {
+    border-top: 1px solid #b0b0b0;
+    margin-top: -1px;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    padding:0.1rem 0;
+}
+.content-add>form>ul>li>* {
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+.content-add>form>ul>li>label {
+    width: 1.5rem;
+    font-size: 0.26rem;
+}
+.content-add>form>ul>li>input {
+    flex-grow: 1;
+    border:none;
+    outline:none;
+    font-size: 0.26rem;
+}
+ .content-add>.btn-save {
+    padding:0.2rem, 0.2rem;
+    border:none;
+    outline:none;
+    background-color: #fff;
+    height: 1rem;
+    font-size: 0.3rem;
+    background-color: #FB1E79;
+    border-radius: 0.26rem;
+    margin:0.3rem 0.3rem;
+    color: #fff;
+}
+
+/*收货列表样式*/
+.content.content-list {
+    background-color: #F2F2F2;
+}
+.content.content-list>ul {
+    padding: 0.2rem 0.2rem;
+}
+.content.content-list>ul>li {
+    background-color: #fff;
+    padding: 0.2rem 0.2rem;
+    border-radius: 0.26rem;
+    margin-top: 0.2rem;
+    
+}
+.content.content-list>ul>li>div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.1rem;
+}
+.content.content-list>ul>li>div>p {
+    font-size: 0.28rem;
+}
+.content.content-list>ul>li>p {
+   
+    font-size: 0.26rem;
+    padding-bottom: 0.5rem;
+}
+.content.content-list>ul>li>div>a.btn-default{
+    border:1px solid #ccc;
+    padding: 0.08rem 0.2rem;
+    border-radius: 0.26rem;
+    font-size: 0.24rem;
+}
+
+.content.content-list>ul>li>div>a.btn-default:before{
+    content:'设为默认地址';
+}
+.content.content-list>ul>li>div>a.btn-default.default{
+     border:1px solid #FB1E79;
+}
+.content.content-list>ul>li>div>a.btn-default.default:before{
+    content:'默认地址';
+}
+.content.content-list>ul>li>div>i.btn-update {
+    font-style:normal;
+    font-size: 0.24rem;
+}
+
+/*无地址弹窗*/
+.no-address {
+    position:absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+    /*background-color: #ccc;*/
+    text-align: center;
+    display: none;
+}
+.no-address.show{
+    display: block;
+}
+.no-address>p{
+    font-size: 0.4rem;
+    color: #FB1E79;
+}

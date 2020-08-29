@@ -1,0 +1,133 @@
+/* 
+* @Author: liwenqi
+* @Date:   2019-08-10 10:11:41
+* @Last Modified by:   liwenqi
+* @Last Modified time: 2019-08-16 20:59:47
+*/
+.user {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.user>.header {
+    width: 100%;
+    height: 0.9rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+.user>.header>span.header-back {
+    width: 1rem;
+    height: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 1rem;
+}
+.user>.header>span.header-back>i {
+    font-size: 0.4rem;
+}
+.user>.header>span.header-content {
+    height: 100%;
+    flex-grow: 1;
+}
+.user>.content {
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding:0 0.5rem ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.user>.content>img {
+    height: 1.2rem;
+    text-align: center;
+    flex-shrink: 0;
+    
+}
+.user>.content>.content-input {
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.35rem;
+}
+.user>.content>.content-input>span {
+    width:49.2%;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.36rem;
+    padding:0.2rem 0.2rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid transparent;
+}
+span.active{
+    border-bottom: 1px solid #FF84B1 !important;
+    color:#FF84B1 ;
+}
+.login-form{
+    margin-top: 0.8rem;
+   
+}
+.login-form.hide{
+    display: none ;
+}
+.form-item{
+    height: 1rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    box-sizing: border-box;
+    position:relative;
+}
+.form-item>i{
+    width: 0.5rem;
+    flex-shrink: 0;
+    font-size: 0.5rem;
+}
+.form-item>input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 0.32rem;
+    padding:0 0.2rem;
+}
+.form-item>input::-webkit-input-placeholder{
+    color: #666;
+} 
+button{
+    border: none;
+    outline: none;
+}
+button.btn-login{
+    width: 100%;
+    height: 1rem;
+    background-color:#FF84B1;
+    color: white;
+    font-size: 0.32rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+button.btn-code{
+    position: absolute;
+    top: 0.2rem;
+    right: 0;
+    border-radius: 0.26rem;
+    font-size: 0.2rem;
+    width: 1.4rem;
+    flex-shrink: 0;
+    height: 0.5rem;
+    border: 1px solid #FF84B1;
+    color: #FF84B1;
+    background-color: #fff;
+
+}
+a{
+    font-size: 0.3rem;
+    color: #b0b0b0;
+    padding:0.1rem 0.15rem;
+    border:1px solid #FF84B1;
+    border-radius: 0.26rem;
+}

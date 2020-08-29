@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../assets/webREM.js"></script>
+        <link rel="stylesheet" href="../assets/reset.css" />
+        <link rel="stylesheet" href="iconfont.css" />
+        <link rel="stylesheet" href="index.css" />
+        <title>购物车页面</title>
+    </head>
+    <body>
+        <div class="cart">
+           <div class="cart-header">
+                <a href="#" onclick='history.back();'>&lt</a>
+                <div class="header-center">购物车</div>
+                <span class="edit-over">编辑</span>
+            </div> 
+            <div class="cart-content">
+                <ul></ul>
+            </div>
+            <div class="cart-footer normal ">
+                <span class="all" data-group='normal'><i class=" checkbox checked "></i> 全选</span>
+                <span class="account-wrapper" >
+                    合计：<em class="account">￥ 0.00 </em>
+                </span>
+                <button class="btn-settlement">结算<em class="totle"></em></button>
+            </div>
+            <div class="cart-footer edit hidden ">
+                <span class="all" data-group='edit'><i class=" checkbox "></i>全选</span>
+                <button class="btn-delete">删除<em class="totle"></em></button>
+            </div>
+        </div>
+        <p class="isloading">正在加载.....</p>
+        <div class="epmty-cart">
+            <img src="bj_baobei.png" alt="" />
+            <a href="/category/index.html">
+                <p>去逛逛</p>
+            </a>
+        </div>
+        <script src="../assets/jquery-3.4.1.min.js"></script>
+        <script src="../assets/http.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../assets/webREM.js"></script>
+        <link rel="stylesheet" href="../assets/reset.css" />
+        <link rel="stylesheet" href="index.css" />
+       
+        <title>全部订单</title>
+    </head>
+    <body>
+        <div class="order">
+            <div class="order-header">
+                <a href="#" onclick='history.back()'>&lt</a>
+                <div class="header-center">订单详情</div>
+                <span class=""></span>
+            </div>
+            <div class="order-nav">
+                <ul>
+                    <li class="active">全部</li>
+                    <li>待付款</li>
+                    <li>待收货</li>
+                    <li>已完成</li>
+                </ul>
+            </div>
+            <div class="order-content">
+                <ul></ul>
+            </div>
+        </div>
+         <div class="no-order">
+            <p>您还没有订单呦~</p>
+            <a href="/home/index.html">去逛逛</a>
+        </div> 
+        <script src="../assets/jquery-3.4.1.min.js"></script>
+        <script src="../assets/http.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

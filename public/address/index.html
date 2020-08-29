@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="../assets/webREM.js"></script>
+        <link rel="stylesheet" href="../assets/reset.css" />
+        <link rel="stylesheet" href="iconfont.css" />
+        <link rel="stylesheet" href="index.css" />
+        <title>地址</title>
+    </head>
+    <body>
+        <div class="address">
+            <div class="header">
+                <a href="#" class="iconfont icon-back back" onclick="history.back()"></a>
+                <a href="#" class="iconfont icon-back exit-edit"></a>
+                <h3 class="title"></h3>
+                <button class=" btn btn-add">+</button>
+                <button class=" btn btn-delete">删除</button>
+            </div>
+            <div class=" content content-list">
+                <ul class="address-list">
+                </ul>
+            </div>
+            <div class=" content content-add hide">
+                <form action="">
+                    <ul>
+                        <li><label for="a">收货人</label><input type="text"  id="a" name="receiveName"  class="receive-name" /></li>
+                        <li><label for="b">手机号码</label><input type="text" id="b" name='receiveTel' class="receive-tel" /></li>
+                        <li class="region"><label for="">选择地区</label><input type="text"  name='receiveAddress' class="receive-address" /></li>
+                        <li><label for="d">详细地址</label><input type="text" id="d" name='receiveAddressDetail'  class="receive-address-detail" /></li>
+                    </ul>
+
+                </form>
+                <button class="btn-save">保存</button>
+            </div>
+            
+        </div>
+        <div class="address-dialog-wrapper ">
+            <div class="address-dialog ">
+                <h3 class="title">请选择区域</h3>
+                <i class="iconfont icon-add  remove-wrapper"></i>
+                <p class="cur">请选择</p>
+                <ul class="dialog-list">
+                      
+                </ul>
+            </div>
+        </div>
+        <div class="no-address">
+            <p>暂无地址，快去添加新地址吧</p>
+        </div>
+        <script src="../assets/jquery-3.4.1.min.js"></script>
+        <script src="../assets/http.js"></script>
+        <script src="regions.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
